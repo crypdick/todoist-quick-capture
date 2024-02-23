@@ -6,7 +6,7 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry]
 name = "todoist_quick_capture"
 version = "0.1.0"
-description = "Awesome `todoist_quick_capture` is a Python cli/package created with https://github.com/Undertone0809/python-package-template"
+description = "A simple GUI for quickly adding tasks to Todoist"
 readme = "README.md"
 authors = ["todoist_quick_capture <public@richarddecal.com>"]
 license = "MIT"

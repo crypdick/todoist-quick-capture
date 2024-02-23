@@ -2,162 +2,24 @@
 
 <div align="center">
 
-[![Build status](https://github.com/crypdick/todoist_quick_capture/workflows/build/badge.svg?branch=master&event=push)](https://github.com/crypdick/todoist_quick_capture/actions?query=workflow%3Abuild)
+[![Build status](https://github.com/crypdick/todoist_quick_capture/workflows/build/badge.svg?branch=main&event=push)](https://github.com/crypdick/todoist_quick_capture/actions?query=workflow%3Abuild)
 [![Python Version](https://img.shields.io/pypi/pyversions/todoist_quick_capture.svg)](https://pypi.org/project/todoist_quick_capture/)
 [![Dependencies Status](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/crypdick/todoist_quick_capture/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
 
 [![Code style: ruff](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/astral-sh/ruff)
 [![Security: bandit](https://img.shields.io/badge/security-bandit-green.svg)](https://github.com/PyCQA/bandit)
-[![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/crypdick/todoist_quick_capture/blob/master/.pre-commit-config.yaml)
+[![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/crypdick/todoist_quick_capture/blob/main/.pre-commit-config.yaml)
 [![Semantic Versions](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--versions-e10079.svg)](https://github.com/crypdick/todoist_quick_capture/releases)
-[![License](https://img.shields.io/github/license/todoist_quick_capture/todoist_quick_capture)](https://github.com/crypdick/todoist_quick_capture/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/todoist_quick_capture/todoist_quick_capture)](https://github.com/crypdick/todoist_quick_capture/blob/main/LICENSE)
 ![Coverage Report](assets/images/coverage.svg)
 
-Awesome `todoist_quick_capture` is a Python cli/package created with https://github.com/Undertone0809/python-package-template
+Todoist does not support a quick capture command on Linux. This package is a simple GUI to quickly capture tasks and send them to Todoist, e.g. "Buy milk tom 5pm p1 #grocery @shopping".
+
+Note that duration and reminders are not yet supported by the Todoist API, e.g. "Read book 5p for 40m !1hb". The task will get created with the duration and reminder text in the title without being parsed.
 
 </div>
 
-## Very first steps
-
-### Initialize your code
-
-1. Initialize `git` inside your repo:
-
-```bash
-cd todoist_quick_capture && git init
-```
-
-2. If you don't have `Poetry`. 
-
-Conda environment is is recommended.
-
-```bash
-conda create -n todoist_quick_capture python==3.10
-```
-
-Please activate python of current project and install run:
-
-```bash
-conda activate todoist_quick_capture
-pip install poetry
-```
-
-3. Initialize poetry and `pre-commit` hooks:
-
-```bash
-make install
-```
-
-If you obtain a timeout error when installing, you can try to append an image source config in `poetry.toml`. The following example is tsinghua image source.
-
-```toml
-[[tool.poetry.source]]
-name = "tsinghua"
-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
-priority = "default"
-```
-
-4. Run the codestyle to polish your code:
-
-```bash
-make polish-codestyle
-```
-
-5. Upload initial code to GitHub:
-
-```bash
-git add .
-git commit -m ":tada: Initial commit"
-git branch -M main
-git remote add origin https://github.com/crypdick/todoist_quick_capture.git
-git push -u origin main
-```
-
-### Set up bots
-
-- Set up [Dependabot](https://docs.github.com/en/github/administering-a-repository/enabling-and-disabling-version-updates#enabling-github-dependabot-version-updates) to ensure you have the latest dependencies.
-- Set up [Stale bot](https://github.com/apps/stale) for automatic issue closing.
-
-### Poetry
-
-Want to know more about Poetry? Check [its documentation](https://python-poetry.org/docs/).
-
-<details>
-<summary>Details about Poetry</summary>
-<p>
-
-Poetry's [commands](https://python-poetry.org/docs/cli/#commands) are very intuitive and easy to learn, like:
-
-- `poetry add numpy@latest`
-- `poetry run pytest`
-- `poetry publish --build`
-
-etc
-</p>
-</details>
-
-### Building and releasing your package
-
-Building a new version of the application contains steps:
-
-- Bump the version of your package `poetry version <version>`. You can pass the new version explicitly, or a rule such as `major`, `minor`, or `patch`. For more details, refer to the [Semantic Versions](https://semver.org/) standard.
-- Make a commit to `GitHub`.
-- Create a `GitHub release`.
-- And... publish 🙂 `poetry publish --build`
-
-## 🎯 What's next
-
-Well, that's up to you 💪🏻. I can only recommend the packages and articles that helped me.
-
-- [`Typer`](https://github.com/tiangolo/typer) is great for creating CLI applications.
-- [`Rich`](https://github.com/willmcgugan/rich) makes it easy to add beautiful formatting in the terminal.
-- [`Pydantic`](https://github.com/samuelcolvin/pydantic/) – data validation and settings management using Python type hinting.
-- [`Loguru`](https://github.com/Delgan/loguru) makes logging (stupidly) simple.
-- [`tqdm`](https://github.com/tqdm/tqdm) – fast, extensible progress bar for Python and CLI.
-- [`IceCream`](https://github.com/gruns/icecream) is a little library for sweet and creamy debugging.
-- [`orjson`](https://github.com/ijl/orjson) – ultra fast JSON parsing library.
-- [`Returns`](https://github.com/dry-python/returns) makes you function's output meaningful, typed, and safe!
-- [`Hydra`](https://github.com/facebookresearch/hydra) is a framework for elegantly configuring complex applications.
-- [`FastAPI`](https://github.com/tiangolo/fastapi) is a type-driven asynchronous web framework.
-
-Articles:
-
-- [Open Source Guides](https://opensource.guide/).
-- [A handy guide to financial support for open source](https://github.com/nayafia/lemonade-stand)
-- [GitHub Actions Documentation](https://help.github.com/en/actions).
-- Maybe you would like to add [gitmoji](https://gitmoji.carloscuesta.me/) to commit names. This is really funny. 😄
-
-## 🚀 Features
-
-### Development features
-
-- Supports for `Python 3.9` and higher.
-- [`Poetry`](https://python-poetry.org/) as the dependencies manager. See configuration in [`pyproject.toml`](https://github.com/crypdick/todoist_quick_capture/blob/master/pyproject.toml) and [`setup.cfg`](https://github.com/crypdick/todoist_quick_capture/blob/master/setup.cfg).
-- Faster formatter tool, automatic codestyle with [`ruff`](https://github.com/astral-sh/ruff) to replace [`black`](https://github.com/psf/black), [`isort`](https://github.com/timothycrosley/isort) and [`pyupgrade`](https://github.com/asottile/pyupgrade).
-- Ready-to-use [`pre-commit`](https://pre-commit.com/) hooks with code-formatting.
-- Type checks with  [`ruff`](https://github.com/astral-sh/ruff); docstring checks with [`darglint`](https://github.com/terrencepreilly/darglint); security checks with [`safety`](https://github.com/pyupio/safety) and [`bandit`](https://github.com/PyCQA/bandit)
-- Testing with [`pytest`](https://docs.pytest.org/en/latest/).
-- Ready-to-use [`.editorconfig`](https://github.com/crypdick/todoist_quick_capture/blob/master/.editorconfig), [`.dockerignore`](https://github.com/crypdick/todoist_quick_capture/blob/master/.dockerignore), and [`.gitignore`](https://github.com/crypdick/todoist_quick_capture/blob/master/.gitignore). You don't have to worry about those things.
-
-### Deployment features
-
-- `GitHub` integration: issue and pr templates.
-- `Github Actions` with predefined [build workflow](https://github.com/crypdick/todoist_quick_capture/blob/master/.github/workflows/build.yml) as the default CI/CD.
-- Everything is already set up for security checks, codestyle checks, code formatting, testing, linting, docker builds, etc with [`Makefile`](https://github.com/crypdick/todoist_quick_capture/blob/master/Makefile#L89). More details in [makefile-usage](#makefile-usage).
-- [Dockerfile](https://github.com/crypdick/todoist_quick_capture/blob/master/docker/Dockerfile) for your package.
-- Always up-to-date dependencies with [`@dependabot`](https://dependabot.com/). You will only [enable it](https://docs.github.com/en/github/administering-a-repository/enabling-and-disabling-version-updates#enabling-github-dependabot-version-updates).
-- Automatic drafts of new releases with [`Release Drafter`](https://github.com/marketplace/actions/release-drafter). You may see the list of labels in [`release-drafter.yml`](https://github.com/crypdick/todoist_quick_capture/blob/master/.github/release-drafter.yml). Works perfectly with [Semantic Versions](https://semver.org/) specification.
-
-### Open source community features
-
-- Ready-to-use [Pull Requests templates](https://github.com/crypdick/todoist_quick_capture/blob/master/.github/PULL_REQUEST_TEMPLATE.md) and several [Issue templates](https://github.com/crypdick/todoist_quick_capture/tree/master/.github/ISSUE_TEMPLATE).
-- Files such as: `LICENSE`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, and `SECURITY.md` are generated automatically.
-- [`Stale bot`](https://github.com/apps/stale) that closes abandoned issues after a period of inactivity. (You will only [need to setup free plan](https://github.com/marketplace/stale)). Configuration is [here](https://github.com/crypdick/todoist_quick_capture/blob/master/.github/.stale.yml).
-- [Semantic Versions](https://semver.org/) specification with [`Release Drafter`](https://github.com/marketplace/actions/release-drafter).
-
 ## Installation locally
-
-> If you want to push your code to github repo, you can delete upper parts from [Very first steps](#very-first-steps) to [Open source community features](#open-source-community-features), [Installation Locally](#installation-locally) is for user.
 
 Conda package manager is recommended. Create a conda environment.
 
@@ -172,7 +34,15 @@ conda activate todoist_quick_capture
 pip install poetry
 ```
 
-Then you can run the client using the following command:
+## Running the app using python
+
+```bash
+python app.py
+```
+
+## Running from CLI
+
+You can run the client using the following command:
 
 ```bash
 todoist_quick_capture --help
@@ -186,7 +56,7 @@ poetry run todoist_quick_capture --help
 
 ### Makefile usage
 
-[`Makefile`](https://github.com/crypdick/todoist_quick_capture/blob/master/Makefile) contains a lot of functions for faster development.
+[`Makefile`](https://github.com/crypdick/todoist_quick_capture/blob/main/Makefile) contains a lot of functions for faster development.
 
 
 <details>
@@ -363,15 +233,15 @@ We use [`Release Drafter`](https://github.com/marketplace/actions/release-drafte
 |            `documentation`            |    📝 Documentation     |
 |            `dependencies`             | ⬆️ Dependencies updates |
 
-You can update it in [`release-drafter.yml`](https://github.com/crypdick/todoist_quick_capture/blob/master/.github/release-drafter.yml).
+You can update it in [`release-drafter.yml`](https://github.com/crypdick/todoist_quick_capture/blob/main/.github/release-drafter.yml).
 
 GitHub creates the `bug`, `enhancement`, and `documentation` labels for you. Dependabot creates the `dependencies` label. Create the remaining labels on the Issues tab of your GitHub repository, when you need them.
 
 ## 🛡 License
 
-[![License](https://img.shields.io/github/license/todoist_quick_capture/todoist_quick_capture)](https://github.com/crypdick/todoist_quick_capture/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/todoist_quick_capture/todoist_quick_capture)](https://github.com/crypdick/todoist_quick_capture/blob/main/LICENSE)
 
-This project is licensed under the terms of the `MIT` license. See [LICENSE](https://github.com/crypdick/todoist_quick_capture/blob/master/LICENSE) for more details.
+This project is licensed under the terms of the `MIT` license. See [LICENSE](https://github.com/crypdick/todoist_quick_capture/blob/main/LICENSE) for more details.
 
 ## 📃 Citation
 
