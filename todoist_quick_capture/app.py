@@ -10,7 +10,7 @@ def call_add_task():
     """
     Calls the add_task function to add a task to Todoist.
 
-    Retrieves the task from the task_entry widget and the API token from the root window.
+    Retrieves the task from the task_entry widget and the API token from the root window
     If the task is not empty, it attempts to add the task using the add_task function.
     If successful, it prints a success message and closes the root window.
     If an error occurs, it displays an error message.

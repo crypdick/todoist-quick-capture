@@ -71,7 +71,8 @@ class TestApiDialogCli(unittest.TestCase):
 #         dialog.attributes.assert_called_once_with("-type", "dialog")
 #         dialog.title.assert_called_once_with("API Token Prompt")
 #         dialog.geometry.assert_called_once_with("400x200")
-#         mock_label.assert_called_once_with(dialog, text="Please enter your API token:")
+#         mock_label.assert_called_once_with(dialog,
+#        text="Please enter your API token:")
 #         mock_label.return_value.pack.assert_called_once()
 #         mock_entry.assert_called_once_with(dialog, show="*")
 #         mock_entry.return_value.pack.assert_called_once()
@@ -111,7 +112,8 @@ class TestApiDialogCli(unittest.TestCase):
 #         dialog.attributes.assert_called_once_with("-type", "dialog")
 #         dialog.title.assert_called_once_with("API Token Prompt")
 #         dialog.geometry.assert_called_once_with("400x200")
-#         mock_label.assert_called_once_with(dialog, text="Please enter your API token:")
+#         mock_label.assert_called_once_with(dialog,
+#        text="Please enter your API token:")
 #         mock_label.return_value.pack.assert_called_once()
 #         mock_entry.assert_called_once_with(dialog, show="*")
 #         mock_entry.return_value.pack.assert_called_once()
