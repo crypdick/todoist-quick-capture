@@ -9,6 +9,16 @@ SECRET_NAME = "todoist_api_token"
 
 
 def get_api_token(root: Optional[Any] = None) -> str:
+    """
+    Retrieves the API token for Todoist.
+
+    Args:
+        root (Optional[Any]): The root object for the GUI dialog. Defaults to None.
+
+    Returns:
+        str: The API token.
+
+    """
     existing_token = keyring.get_password(APP_NAME, SECRET_NAME)
     if existing_token:
         return existing_token
@@ -23,6 +33,17 @@ def get_api_token(root: Optional[Any] = None) -> str:
 
 
 def api_dialog_gui(root):
+    """
+    Opens a dialog window to prompt the user for an API token.
+    The API token is securely stored using keyring.
+    Returns the API token once it is entered and stored.
+
+    Parameters:
+    - root: The root Tkinter window.
+
+    Returns:
+    - The API token entered by the user.
+    """
     print("Opening API token prompt...")
 
     def store_api_token():
@@ -65,6 +86,13 @@ def api_dialog_gui(root):
 
 
 def api_dialog_cli():
+    """
+    Prompts the user to enter their Todoist API token, stores it securely using keyring,
+    and returns the stored API token.
+
+    Returns:
+        str: The Todoist API token.
+    """
     api_token = input("Please enter your Todoist API token: ")
     keyring.set_password(APP_NAME, SECRET_NAME, api_token)
     print("API token stored securely.")

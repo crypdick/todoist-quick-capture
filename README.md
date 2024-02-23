@@ -104,27 +104,9 @@ make check-codestyle
 </p>
 </details>
 
-<details>
-<summary>3. Code security</summary>
-<p>
-
-> If this command is not selected during installation, it cannnot be used.
-
-```bash
-make check-safety
-```
-
-This command launches `Poetry` integrity checks as well as identifies security issues with `Safety` and `Bandit`.
-
-```bash
-make check-safety
-```
-
-</p>
-</details>
 
 <details>
-<summary>4. Tests with coverage badges</summary>
+<summary>3. Tests with coverage badges</summary>
 <p>
 
 Run `pytest`
@@ -137,7 +119,7 @@ make test
 </details>
 
 <details>
-<summary>5. All linters</summary>
+<summary>4. All linters</summary>
 <p>
 
 Of course there is a command to run all linters in one:
@@ -156,7 +138,7 @@ make check-codestyle && make test && make check-safety
 </details>
 
 <details>
-<summary>6. Docker</summary>
+<summary>5. Docker</summary>
 <p>
 
 ```bash
@@ -181,7 +163,7 @@ More information [about docker](https://github.com/Undertone0809/python-package-
 </details>
 
 <details>
-<summary>7. Cleanup</summary>
+<summary>6. Cleanup</summary>
 <p>
 Delete pycache files
 

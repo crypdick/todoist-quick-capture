@@ -2,11 +2,25 @@ import subprocess
 import tkinter as tk
 from tkinter import messagebox
 
-from add import add_task
-from get_token import get_api_token
+from todoist_quick_capture.add import add_task
+from todoist_quick_capture.get_token import get_api_token
 
 
 def call_add_task():
+    """
+    Calls the add_task function to add a task to Todoist.
+
+    Retrieves the task from the task_entry widget and the API token from the root window.
+    If the task is not empty, it attempts to add the task using the add_task function.
+    If successful, it prints a success message and closes the root window.
+    If an error occurs, it displays an error message.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
     task = task_entry.get()
     api_token = get_api_token(root)
     if task:
