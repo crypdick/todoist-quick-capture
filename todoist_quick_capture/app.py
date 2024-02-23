@@ -3,16 +3,16 @@ import tkinter as tk
 from tkinter import messagebox
 
 from add import add_task
+from get_token import get_api_token
 
 
 def call_add_task():
     task = task_entry.get()
-    # due_date = due_entry.get() if due_entry.get() else None
-    # priority = priority_entry.get() if priority_entry.get() else None
+    api_token = get_api_token(root)
     if task:
         try:
             # task = add_task(task=task, due=due_date, priority=priority)
-            task = add_task(task)
+            task = add_task(task, api_token)
             print(f"Task added successfully! {task}")
             root.destroy()  # Close the window
         except subprocess.CalledProcessError as e:
