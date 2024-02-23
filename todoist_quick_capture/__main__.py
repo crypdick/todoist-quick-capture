@@ -35,6 +35,7 @@ def main(
         help="Prints the version of the todoist_quick_capture package.",
     ),
 ) -> None:
+    api_token = get_api_token(None)
     task = add_task(text=task)
 
 
