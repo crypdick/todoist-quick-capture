@@ -14,7 +14,7 @@ repository = "https://github.com/crypdick/todoist_quick_capture"
 homepage = "https://github.com/crypdick/todoist_quick_capture"
 
 # Keywords description https://python-poetry.org/docs/pyproject/#keywords
-keywords = []  #! Update me
+keywords = ["todoist", "linux"]
 
 # Pypi classifiers: https://pypi.org/classifiers/
 classifiers = [  #! Update me
@@ -29,7 +29,8 @@ classifiers = [  #! Update me
 
 [tool.poetry.scripts]
 # Entry points for the package https://python-poetry.org/docs/pyproject/#scripts
-"todoist_quick_capture" = "todoist_quick_capture.__main__:app"
+#"todoist_quick_capture" = "todoist_quick_capture.__main__:app"
+"todoist_quick_capture" = "todoist_quick_capture.app:main"
 
 
 
@@ -106,7 +107,7 @@ line-ending = "auto"
 [tool.pytest.ini_options]
 # https://docs.pytest.org/en/6.2.x/customize.html#pyproject-toml
 # Directories that are not visited by pytest collector:
-norecursedirs =["hooks", "*.egg", ".eggs", "dist", "build", "docs", ".tox", ".git", "__pycache__"]
+norecursedirs =["hooks", "*.egg", ".eggs", "dist", "build", "docs", ".tox", ".git", "__pycache__", ".venv", "venv", ".conda"]
 doctest_optionflags = ["NUMBER", "NORMALIZE_WHITESPACE", "IGNORE_EXCEPTION_DETAIL"]
 
 # Extra options:
@@ -119,6 +120,9 @@ addopts = [
 
 [tool.coverage.run]
 source = ["tests"]
+omit = [
+  ".venv", "venv", ".conda"
+  ]
 
 [coverage.paths]
 source = "todoist_quick_capture"
