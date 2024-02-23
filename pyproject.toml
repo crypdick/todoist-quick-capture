@@ -10,8 +10,8 @@ description = "Awesome `todoist_quick_capture` is a Python cli/package created w
 readme = "README.md"
 authors = ["todoist_quick_capture <public@richarddecal.com>"]
 license = "MIT"
-repository = "https://github.com/todoist_quick_capture/todoist_quick_capture"
-homepage = "https://github.com/todoist_quick_capture/todoist_quick_capture"
+repository = "https://github.com/crypdick/todoist_quick_capture"
+homepage = "https://github.com/crypdick/todoist_quick_capture"
 
 # Keywords description https://python-poetry.org/docs/pyproject/#keywords
 keywords = []  #! Update me
