@@ -1,0 +1,3 @@
+python-dotenv
+todoist_api_python
+click
