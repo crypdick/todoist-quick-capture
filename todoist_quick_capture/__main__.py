@@ -5,6 +5,7 @@ from rich.console import Console
 
 from todoist_quick_capture import version
 from todoist_quick_capture.add import add_task
+from todoist_quick_capture.get_token import get_api_token
 
 app = typer.Typer(
     name="todoist_quick_capture",
@@ -36,7 +37,7 @@ def main(
     ),
 ) -> None:
     api_token = get_api_token(None)
-    task = add_task(text=task)
+    task = add_task(text=task, token=api_token)
 
 
 if __name__ == "__main__":
