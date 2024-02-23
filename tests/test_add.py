@@ -15,7 +15,7 @@ class TestAddTask(unittest.TestCase):
         mock_task.data = {"task_id": task_id}
 
         # Act
-        result = add_task(text, token)
+        add_task(text, token)
 
         mock_todoist_api.assert_called_once_with(token)
         mock_todoist_api.return_value.quick_add_task.assert_called_once_with(text=text)
