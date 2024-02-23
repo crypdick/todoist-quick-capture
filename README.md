@@ -17,6 +17,8 @@ Todoist does not support a quick capture command on Linux. This package is a sim
 
 Note that duration and reminders are not yet supported by the Todoist API, e.g. "Read book 5p for 40m !1hb". The task will get created with the duration and reminder text in the title without being parsed.
 
+The first time you add a task it will prompt you for your Todoist API key, which can be found using [these instructions](https://todoist.com/help/articles/find-your-api-token-Jpzx9IIlB). The API key is stored securely in the OS keyring.
+
 </div>
 
 ## Installation locally
