@@ -50,7 +50,7 @@ bandit = "^1.7.9"
 ruff = "^0.6.3"
 pre-commit = "^3.8.0"
 coverage = "^7.6.1"
-coverage-badge = "^1.1.1"
+coverage-badge = "^1.1.2"
 
 
 
