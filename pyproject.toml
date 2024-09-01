@@ -40,7 +40,7 @@ python = "^3.9"
 typer = {extras = ["all"], version = "^0.12.5"}
 rich = "^13.8.0"
 todoist-api-python = "^2.1.5"
-keyring = "^25.2.1"
+keyring = "^25.3.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^8.3.2"
