@@ -38,7 +38,7 @@ classifiers = [  #! Update me
 python = "^3.9"
 
 typer = {extras = ["all"], version = "^0.12.5"}
-rich = "^13.8.0"
+rich = "^13.8.1"
 todoist-api-python = "^2.1.7"
 keyring = "^25.3.0"
 
