@@ -49,7 +49,7 @@ pytest-cov = "^6.0.0"
 bandit = "^1.7.10"
 ruff = "^0.7.1"
 pre-commit = "^4.0.1"
-coverage = "^7.6.4"
+coverage = "^7.6.8"
 coverage-badge = "^1.1.2"
 
 
