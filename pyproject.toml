@@ -48,7 +48,7 @@ pytest-html = "^3.1.1"
 pytest-cov = "^6.0.0"
 bandit = "^1.8.0"
 ruff = "^0.8.4"
-pre-commit = "^4.0.1"
+pre-commit = "^4.1.0"
 coverage = "^7.6.10"
 coverage-badge = "^1.1.2"
 
