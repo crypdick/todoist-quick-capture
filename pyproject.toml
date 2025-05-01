@@ -39,7 +39,7 @@ python = "^3.9"
 
 typer = {extras = ["all"], version = "^0.15.3"}
 rich = "^14.0.0"
-todoist-api-python = "^2.1.7"
+todoist-api-python = "^3.0.1"
 keyring = "^25.6.0"
 
 [tool.poetry.dev-dependencies]
