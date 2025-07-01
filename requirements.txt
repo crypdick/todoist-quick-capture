@@ -12,7 +12,7 @@ jeepney==0.8.0 ; python_version >= "3.9" and python_version < "4.0" and sys_plat
 keyring==24.3.0 ; python_version >= "3.9" and python_version < "4.0"
 more-itertools==10.7.0 ; python_version >= "3.9" and python_version < "4.0"
 pycparser==2.21 ; python_version >= "3.9" and python_version < "4.0" and sys_platform == "linux" and platform_python_implementation != "PyPy"
-pygments==2.19.1 ; python_version >= "3.9" and python_version < "4.0"
+pygments==2.19.2 ; python_version >= "3.9" and python_version < "4.0"
 pywin32-ctypes==0.2.2 ; python_version >= "3.9" and python_version < "4.0" and sys_platform == "win32"
 requests==2.32.3 ; python_version >= "3.9" and python_version < "4.0"
 rich==10.16.2 ; python_version >= "3.9" and python_version < "4.0"
