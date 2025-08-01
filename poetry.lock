@@ -441,14 +441,14 @@ test-randomorder = ["pytest-randomly"]
 
 [[package]]
 name = "dataclass-wizard"
-version = "0.35.0"
+version = "0.35.1"
 description = "Lightning-fast JSON wizardry for Python dataclasses — effortless serialization right out of the box!"
 optional = false
 python-versions = "*"
 groups = ["main"]
 files = [
-    {file = "dataclass-wizard-0.35.0.tar.gz", hash = "sha256:8e4b254991bf93416a48e2911bb985e3787cff11f00270c3d1165d2523cb3fb6"},
-    {file = "dataclass_wizard-0.35.0-py2.py3-none-any.whl", hash = "sha256:3bb19292477f0bebb12e9cc9178f1a6b93d133af4ae065abf14b713142b32edf"},
+    {file = "dataclass-wizard-0.35.1.tar.gz", hash = "sha256:18c780e3c574c3534cb2bbc447025cff140f0e640cd98e143a7d234c6445d09e"},
+    {file = "dataclass_wizard-0.35.1-py2.py3-none-any.whl", hash = "sha256:30858e14d780a40792fa190d55220a12cd0ef02a3d8fb8373b1eb4363d4b5549"},
 ]
 
 [package.dependencies]
