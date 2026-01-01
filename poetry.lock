@@ -495,24 +495,29 @@ test-randomorder = ["pytest-randomly"]
 
 [[package]]
 name = "dataclass-wizard"
-version = "0.35.1"
-description = "Lightning-fast JSON wizardry for Python dataclasses — effortless serialization right out of the box!"
+version = "0.38.2"
+description = "A wizard-like JSON serialization library for Python dataclasses"
 optional = false
-python-versions = "*"
+python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "dataclass-wizard-0.35.1.tar.gz", hash = "sha256:18c780e3c574c3534cb2bbc447025cff140f0e640cd98e143a7d234c6445d09e"},
-    {file = "dataclass_wizard-0.35.1-py2.py3-none-any.whl", hash = "sha256:30858e14d780a40792fa190d55220a12cd0ef02a3d8fb8373b1eb4363d4b5549"},
+    {file = "dataclass_wizard-0.38.2-py3-none-any.whl", hash = "sha256:774989d58fcfa9f03d84676518b0e57b1d148a2ca94fa0e1a5b8952f4a555075"},
+    {file = "dataclass_wizard-0.38.2.tar.gz", hash = "sha256:44db4f271a87d135d4d325161c042f544feef896c3ee80075036b551b3b9e68b"},
 ]
 
 [package.dependencies]
-typing-extensions = {version = ">=4.9.0", markers = "python_version <= \"3.12\""}
+typing-extensions = {version = ">=4.13.0", markers = "python_version <= \"3.12\""}
 
 [package.extras]
-dev = ["Sphinx (==7.4.7) ; python_version == \"3.9\"", "Sphinx (==8.1.3) ; python_version >= \"3.10\"", "attrs (==24.3.0)", "bump2version (==1.0.1)", "coverage (>=6.2)", "dacite (==1.8.1)", "dataclass-factory (==2.16)", "dataclass-wizard[toml]", "dataclasses-json (==0.6.7)", "flake8 (>=3)", "jsons (==1.6.3)", "mashumaro (==3.15)", "matplotlib", "pip (>=21.3.1)", "pydantic (==2.10.3)", "pytest (==8.3.4)", "pytest-benchmark[histogram]", "pytest-cov (==6.0.0)", "pytest-mock (>=3.6.1)", "python-dotenv (>=1,<2)", "pytimeparse (==1.1.8)", "sphinx-autodoc-typehints (==2.5.0)", "sphinx-copybutton (==0.5.2)", "sphinx-issues (==5.0.0)", "tomli (>=2,<3) ; python_version == \"3.10\"", "tomli (>=2,<3) ; python_version == \"3.9\"", "tomli-w (>=1,<2)", "tox (==4.23.2)", "twine (==6.0.1)", "typing-extensions (>=4.9.0)", "watchdog[watchmedo] (==6.0.0)", "wheel (==0.45.1)"]
+all = ["PyYAML (>=6,<7)", "Sphinx (==7.4.7) ; python_version == \"3.9\"", "Sphinx (==8.1.3) ; python_version >= \"3.10\"", "attrs (==24.3.0)", "bump-my-version (==1.2.5)", "coverage (>=6.2)", "dacite (==1.8.1)", "dataclass-factory (==2.16)", "dataclasses-json (==0.6.7)", "flake8 (>=3)", "jsons (==1.6.3)", "mashumaro (==3.15)", "matplotlib", "pydantic (==2.10.3) ; python_version < \"3.14\"", "pytest (==8.3.4)", "pytest-benchmark[histogram]", "pytest-cov (==6.0.0)", "pytest-mock (>=3.6.1)", "python-dotenv (>=1,<2)", "pytimeparse (==1.1.8)", "pytimeparse (>=1.1.7)", "sphinx-autodoc-typehints (==2.5.0) ; python_version >= \"3.10\"", "sphinx-copybutton (==0.5.2)", "sphinx-issues (==5.0.0)", "tomli (>=2,<3) ; python_version == \"3.10\"", "tomli (>=2,<3) ; python_version == \"3.9\"", "tomli-w (>=1,<2)", "tox (==4.23.2)", "twine (==6.0.1)", "typing-extensions (>=4.9.0)", "tzdata (>=2024.1) ; platform_system == \"Windows\"", "watchdog[watchmedo] (==6.0.0)", "wheel (==0.45.1)"]
+bench = ["attrs (==24.3.0)", "dacite (==1.8.1)", "dataclass-factory (==2.16)", "dataclasses-json (==0.6.7)", "jsons (==1.6.3)", "mashumaro (==3.15)", "matplotlib", "pydantic (==2.10.3) ; python_version < \"3.14\"", "pytest-benchmark[histogram]"]
+dev = ["Sphinx (==7.4.7) ; python_version == \"3.9\"", "Sphinx (==8.1.3) ; python_version >= \"3.10\"", "bump-my-version (==1.2.5)", "coverage (>=6.2)", "dataclass-wizard[toml]", "flake8 (>=3)", "pip (>=21.3.1)", "python-dotenv (>=1,<2)", "pytimeparse (==1.1.8)", "tomli (>=2,<3) ; python_version == \"3.10\"", "tomli (>=2,<3) ; python_version == \"3.9\"", "tomli-w (>=1,<2)", "tox (==4.23.2)", "twine (==6.0.1)", "tzdata (>=2024.1) ; platform_system == \"Windows\"", "watchdog[watchmedo] (==6.0.0)", "wheel (==0.45.1)"]
+docs = ["sphinx-autodoc-typehints (==2.5.0) ; python_version >= \"3.10\"", "sphinx-copybutton (==0.5.2)", "sphinx-issues (==5.0.0)", "typing-extensions (>=4.9.0)"]
 dotenv = ["python-dotenv (>=1,<2)"]
+test = ["pytest (==8.3.4)", "pytest-cov (==6.0.0)", "pytest-mock (>=3.6.1)", "tzdata (>=2024.1) ; platform_system == \"Windows\""]
 timedelta = ["pytimeparse (>=1.1.7)"]
 toml = ["tomli (>=2,<3) ; python_version == \"3.10\"", "tomli (>=2,<3) ; python_version == \"3.9\"", "tomli-w (>=1,<2)"]
+tz = ["tzdata (>=2024.1)"]
 yaml = ["PyYAML (>=6,<7)"]
 
 [[package]]
@@ -534,6 +539,7 @@ description = "Backport of PEP 654 (exception groups)"
 optional = false
 python-versions = ">=3.7"
 groups = ["dev"]
+markers = "python_version < \"3.11\""
 files = [
     {file = "exceptiongroup-1.3.1-py3-none-any.whl", hash = "sha256:a7a39a3bd276781e98394987d3a5701d0c4edffb633bb7a5144577f82c773598"},
     {file = "exceptiongroup-1.3.1.tar.gz", hash = "sha256:8b412432c6055b0b7d14c310000ae93352ed6754f70fa8f7c34141f91c4e3219"},
@@ -1303,7 +1309,7 @@ files = [
     {file = "typing_extensions-4.15.0-py3-none-any.whl", hash = "sha256:f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"},
     {file = "typing_extensions-4.15.0.tar.gz", hash = "sha256:0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"},
 ]
-markers = {dev = "python_version < \"3.13\""}
+markers = {dev = "python_version < \"3.11\""}
 
 [[package]]
 name = "urllib3"
