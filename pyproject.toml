@@ -37,7 +37,7 @@ classifiers = [  #! Update me
 [tool.poetry.dependencies]
 python = "^3.9"
 
-typer = {extras = ["all"], version = "^0.21.1"}
+typer = {extras = ["all"], version = "^0.23.2"}
 rich = "^14.3.1"
 todoist-api-python = "^3.2.1"
 keyring = "^25.7.0"
