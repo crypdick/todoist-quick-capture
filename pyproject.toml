@@ -45,7 +45,7 @@ keyring = "^25.7.0"
 [tool.poetry.dev-dependencies]
 pytest = "^8.4.2"
 pytest-html = "^4.2.0"
-pytest-cov = "^7.0.0"
+pytest-cov = "^7.1.0"
 bandit = "^1.8.6"
 ruff = "^0.15.4"
 pre-commit = "^4.3.0"
